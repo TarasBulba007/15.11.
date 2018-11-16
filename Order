@@ -18,6 +18,8 @@ public function deleteItem($item){
 
 class OrderOutput{
   
+   private $order;
+  
    public function printOrder(){
       }
       
@@ -26,6 +28,8 @@ class OrderOutput{
 }
 
 class OrderControl{
+
+   private $order;
       
    public function load(){
       }
