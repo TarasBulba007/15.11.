@@ -1,0 +1,49 @@
+interface Factory{
+  
+    public function getProduct();
+}
+
+interface Product{
+  
+    public function getName();
+}
+
+class Adidas implements Factory{
+
+    public function getProduct(){
+          
+        return new Adidas_Sneakers();
+    }
+}
+
+class Nike implements Factory{
+
+    public function getProduct(){
+          
+        return new NikeSneakers();
+    }
+}
+
+class Adidas_Sneakers implements Product{
+     
+    public function getName(){
+          
+        return 'Adidas<br>';
+    }
+}
+
+class NikeSneakers implements Product{
+    
+    public function getName(){
+          
+        return 'Nike';
+    }
+}
+
+$factory = new Adidas();
+$firstSneakers = $factory->getProduct();
+$factory = new Nike();
+$secondSneakers = $factory->getProduct();
+
+echo $firstSneakers->getName();
+echo $secondSneakers->getName();
