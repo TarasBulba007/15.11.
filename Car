@@ -1,0 +1,41 @@
+ class engine{
+    
+    public function on(){
+          echo "Engine on / ";
+        }
+    
+    public function off(){
+          echo "Engine off";
+        }  
+
+  }
+    
+ class Car{
+    
+    private $color;
+    private $year;
+    private $manufacture;    
+    
+    public function __construct($color, $year, $manufacture){
+        $this->engine = new engine();
+        $this->color = $color;
+        $this->year = $year;
+        $this->manufacture = $manufacture;
+        }
+    
+    public function start_engine(){
+          $this->engine->on();
+        }
+    
+    public function stop_engine(){
+          $this->engine->off();
+        }
+  }
+
+$VAZ = new Car('Baklazhan', '2016', 'Priora');
+$VAZ->start_engine();
+$VAZ->stop_engine();
+  
+    
+
+    
